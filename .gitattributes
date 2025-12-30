@@ -10,4 +10,5 @@
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
 
+*.css linguist-vendored
 *.blade.php linguist-vendored
