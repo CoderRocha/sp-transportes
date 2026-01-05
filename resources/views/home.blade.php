@@ -1,28 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Início</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        <!-- Styles / Scripts -->
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body class="bg-gray-50 min-h-screen">
-        <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
-            <div class="container mx-auto px-4 h-16 flex justify-center items-center">
-                <a href="#">
-                    <img src="/sp-transportes.png" alt="Logo" class="h-12">
-                </a>
-            </div>
-        </nav>
-
-        <div class="container mx-auto px-4 pt-16">
-            <div class="min-h-[calc(100vh-4rem)] flex flex-col md:grid md:grid-cols-2">
+<x-layout>
+    <div class="min-h-[calc(100vh-4rem)] flex flex-col md:grid md:grid-cols-2">
                 <div class="flex flex-col justify-center p-6 md:p-12 order-1 md:order-none">
                     <div class="space-y-8">
                         <div class="space-y-4">
@@ -55,6 +32,4 @@
                     <img src="/background.jpg" alt="Entrega" class="object-cover w-full h-full">
                 </div>
             </div>
-        </div>
-    </body>
-</html>
+</x-layout>
