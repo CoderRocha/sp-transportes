@@ -4,7 +4,7 @@
             Histórico de encomendas
         </h1>
         <p class="mt-4 text-lg">
-            Cliente: João da Silva
+            Cliente: {{ $cliente->nome }}
         </p>
     </div>
 
@@ -32,24 +32,26 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="hover:bg-gray-50 transition-colors border-b">
+                @foreach ($cliente->enviados as $frete )
+                    <tr class="hover:bg-gray-50 transition-colors border-b">
                     <td class="px-6 py-4 whitespace-nowrap">
-                        <a href="#" class="underline">
-                            ABC123456
+                        <a href="{{ route('frete.rastreamento', ['codigo_rastreio' => $frete->codigo_rastreio]) }}" class="underline">
+                            {{ $frete->codigo_rastreio }}
                         </a>
                     </td>
                     <td class="px-6 py-4">
-                        São Paulo
+                        {{ $frete->origem }}
                     </td>
                     <td class="px-6 py-4">
-                        Rio de Janeiro
+                        {{ $frete->destino }}
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
                         <span class="px-2 py-1 rounded-full bg-green-500 text-white">
-                            Entregue
+                            {{ $frete->status}}
                         </span>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -78,24 +80,26 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="hover:bg-gray-50 transition-colors border-b">
+                @foreach ($cliente->recebidos as $frete )
+                    <tr class="hover:bg-gray-50 transition-colors border-b">
                     <td class="px-6 py-4 whitespace-nowrap">
-                        <a href="#" class="underline">
-                            LMN456789
+                        <a href="{{ route('frete.rastreamento', ['codigo_rastreio' => $frete->codigo_rastreio]) }}" class="underline">
+                            {{ $frete->codigo_rastreio }}
                         </a>
                     </td>
                     <td class="px-6 py-4">
-                        Porto Alegre
+                        {{ $frete->origem }}
                     </td>
                     <td class="px-6 py-4">
-                        Curitiba
+                        {{ $frete->destino }}
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="px-2 py-1 rounded-full bg-blue-500 text-white">
-                            Enviado
+                        <span class="px-2 py-1 rounded-full bg-green-500 text-white">
+                            {{ $frete->status}}
                         </span>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
