@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\FreteStatus;
 use App\Models\Frete;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ class FreteController extends Controller
     {
         $dados = $request->all();
         $dados['codigo_rastreio'] = "TESTE123456";
-        $dados['status'] = "Em Trânsito";
+        $dados['status'] = FreteStatus::EM_TRANSITO;
 
         $frete = Frete::create($dados);
 
