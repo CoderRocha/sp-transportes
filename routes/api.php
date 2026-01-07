@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\ClienteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/ola', function () {
     return 'Ola Mundo!';
 });
+
+Route::post('/clientes', [ClienteController::class, 'store']);
