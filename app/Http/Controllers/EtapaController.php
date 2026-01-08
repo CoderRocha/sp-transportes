@@ -6,11 +6,12 @@ use App\Enums\FreteStatus;
 use App\Http\Requests\StoreEtapaRequest;
 use App\Models\Etapa;
 use App\Models\Frete;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class EtapaController extends Controller
 {
-    public function Store(StoreEtapaRequest $request)
+    public function Store(StoreEtapaRequest $request): JsonResponse|Etapa
     {
         $frete = Frete::find($request->frete_id);
 
