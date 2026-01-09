@@ -16,14 +16,16 @@ class FreteInfolist
                 TextEntry::make('codigo_rastreio'),
                 TextEntry::make('status')
                     ->badge(),
-                TextEntry::make('remetente_id')
+                TextEntry::make('remetente.nome')
                     ->numeric(),
-                TextEntry::make('destinatario_id')
+                TextEntry::make('destinatario.nome')
                     ->numeric(),
                 TextEntry::make('created_at')
+                    ->label('Data de Criação')
                     ->dateTime()
                     ->placeholder('-'),
                 TextEntry::make('updated_at')
+                    ->label('Data de Últ. Atualização')
                     ->dateTime()
                     ->placeholder('-'),
             ]);

@@ -22,14 +22,14 @@ class FreteForm
                 Select::make('status')
                     ->options(FreteStatus::class)
                     ->required(),
-                TextInput::make('remetente_id')
+                Select::make('remetente_id')
                     ->label('Remetente')
-                    ->required()
-                    ->numeric(),
-                TextInput::make('destinatario_id')
+                    ->relationship('remetente', 'nome')
+                    ->required(),
+                Select::make('destinatario_id')
                     ->label('Destinatário')
-                    ->required()
-                    ->numeric(),
+                    ->relationship('destinatario', 'nome')
+                    ->required(),
             ]);
     }
 }

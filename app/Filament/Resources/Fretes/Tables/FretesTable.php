@@ -24,11 +24,11 @@ class FretesTable
                 TextColumn::make('status')
                     ->badge()
                     ->searchable(),
-                TextColumn::make('remetente_id')
+                TextColumn::make('remetente.nome')
                     ->label('Remetente')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('destinatario_id')
+                TextColumn::make('destinatario.nome')
                     ->label('Destinatário')
                     ->numeric()
                     ->sortable(),
