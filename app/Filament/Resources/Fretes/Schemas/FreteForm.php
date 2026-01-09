@@ -13,14 +13,18 @@ class FreteForm
     {
         return $schema
             ->components([
+                TextInput::make('codigo_rastreio')
+                    ->label('Código da Rastreio')
+                    ->readonly()
+                    ->default('Código gerado automaticamente')
+                    ->required(),
+                TextInput::make('status')
+                    ->readonly()
+                    ->default('Status Padrão: Em Trânsito')
+                    ->required(),
                 TextInput::make('origem')
                     ->required(),
                 TextInput::make('destino')
-                    ->required(),
-                TextInput::make('codigo_rastreio')
-                    ->required(),
-                Select::make('status')
-                    ->options(FreteStatus::class)
                     ->required(),
                 Select::make('remetente_id')
                     ->label('Remetente')
