@@ -6,6 +6,7 @@ use App\Filament\Resources\Fretes\Pages\CreateFrete;
 use App\Filament\Resources\Fretes\Pages\EditFrete;
 use App\Filament\Resources\Fretes\Pages\ListFretes;
 use App\Filament\Resources\Fretes\Pages\ViewFrete;
+use App\Filament\Resources\Fretes\RelationManagers\EtapasRelationManager;
 use App\Filament\Resources\Fretes\Schemas\FreteForm;
 use App\Filament\Resources\Fretes\Schemas\FreteInfolist;
 use App\Filament\Resources\Fretes\Tables\FretesTable;
@@ -40,7 +41,7 @@ class FreteResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            EtapasRelationManager::class
         ];
     }
 
