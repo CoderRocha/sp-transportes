@@ -67,9 +67,7 @@ class EtapasRelationManager extends RelationManager
                 AssociateAction::make(),
             ])
             ->recordActions([
-                EditAction::make(),
-                DissociateAction::make(),
-                DeleteAction::make(),
+                
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
