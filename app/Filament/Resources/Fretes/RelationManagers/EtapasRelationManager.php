@@ -64,7 +64,6 @@ class EtapasRelationManager extends RelationManager
 
                         return redirect(request()->header('Referer'));
                     }),
-                AssociateAction::make(),
             ])
             ->recordActions([
                 
@@ -75,5 +74,10 @@ class EtapasRelationManager extends RelationManager
                     DeleteBulkAction::make(),
                 ]),
             ]);
+    }
+
+    public function isReadOnly(): bool
+    {
+        return false;
     }
 }

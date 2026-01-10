@@ -51,7 +51,6 @@ class FreteResource extends Resource
             'index' => ListFretes::route('/'),
             'create' => CreateFrete::route('/create'),
             'view' => ViewFrete::route('/{record}'),
-            'edit' => EditFrete::route('/{record}/edit'),
         ];
     }
 }
