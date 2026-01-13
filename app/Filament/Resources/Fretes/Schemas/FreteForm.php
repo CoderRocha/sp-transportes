@@ -16,12 +16,10 @@ class FreteForm
                 TextInput::make('codigo_rastreio')
                     ->label('Código da Rastreio')
                     ->readonly()
-                    ->default('Código gerado automaticamente')
-                    ->required(),
+                    ->hidden(fn ($record) => !$record || !$record->codigo_rastreio),
                 TextInput::make('status')
                     ->readonly()
-                    ->default('Status Padrão: Em Trânsito')
-                    ->required(),
+                    ->hidden(fn ($record) => !$record || !$record->status),
                 TextInput::make('origem')
                     ->required(),
                 TextInput::make('destino')
