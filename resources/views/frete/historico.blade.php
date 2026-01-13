@@ -35,7 +35,7 @@
                 @foreach ($cliente->enviados as $frete )
                     <tr class="hover:bg-gray-50 transition-colors border-b">
                     <td class="px-6 py-4 whitespace-nowrap">
-                        <a href="{{ route('frete.rastreamento', ['codigo_rastreio' => $frete->codigo_rastreio]) }}" class="underline">
+                        <a href="{{ route('frete.rastreamento', ['codigo_rastreio' => $frete->codigo_rastreio]) }}" target="_blank" class="underline">
                             {{ $frete->codigo_rastreio }}
                         </a>
                     </td>
