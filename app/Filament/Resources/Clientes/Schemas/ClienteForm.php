@@ -14,7 +14,8 @@ class ClienteForm
                 TextInput::make('nome')
                     ->required(),
                 TextInput::make('telefone')
-                    ->required(),
+                    ->required()
+                    ->maxLength(11),
             ]);
     }
 }
